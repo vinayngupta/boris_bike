@@ -16,8 +16,8 @@ class Bike
 		@broken = true
 	end
 
-	# def repaired_bike
-	# 	#collaboration with van and garage
-	# end
+	def needs_fixing
+		!broken?
+	end
 
 end

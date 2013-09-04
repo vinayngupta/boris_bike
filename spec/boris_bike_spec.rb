@@ -3,7 +3,7 @@ require 'boris_bike'
 describe Bike do 
 
 	it 'has a serial number' do
-		bike = Bike.new('12345',nil)
+		bike = Bike.new('12345')
 		expect(bike.serial_number).to eq '12345'
 	end
 
@@ -16,6 +16,11 @@ describe Bike do
 		bike = Bike.new('12345')
 		bike.break!
 		expect(bike.broken?).to be_true
+	end
+
+	it 'needs to be fixed' do
+		bike = Bike.new('12345')
+		expect(bike.needs_fixing).to be_true
 	end
 
 end
